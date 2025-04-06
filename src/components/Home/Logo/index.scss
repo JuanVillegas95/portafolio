@@ -1,0 +1,25 @@
+@import '../../../App.scss';
+.logo-container {
+  position: absolute;
+  right: 10%;
+  top: -10%;
+  width: 400px;
+  height: 600px;
+  opacity: 0;
+  svg {
+    width: 100%;
+    transform: rotateZ(15deg) !important;
+  }
+  .solid-logo {
+    width: 400px;
+    opacity: 0;
+    position: absolute;
+    transform: rotateZ(15deg);
+    left: 0;
+  }
+}
+.svg-logo {
+  width: 100px;
+  stroke: #6d3d2a;
+  stroke-width: 20px;
+}

@@ -1,0 +1,27 @@
+$background-color: #b17f59;
+$primary-color: #ede8dc;
+$secondary-color: #a5b68d;
+$side-bar-color: #181818;
+$tertiary-color: #c1cfa1;
+$icons-color: #4d4d4e;
+
+@import 'animate.css';
+
+@font-face {
+  font-family: 'Cheese';
+  src: url('./assets/fonts/MouldyCheeseRegular.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+input,
+textarea {
+  font-family: 'Helvetica Neue', sans-serif;
+}

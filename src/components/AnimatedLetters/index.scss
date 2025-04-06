@@ -1,0 +1,31 @@
+@import '../../App.scss';
+.text-animate {
+  display: inline-block;
+  opacity: 0;
+  animation-name: bounceIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+  cursor: default;
+}
+
+.text-animate-hover {
+  display: inline-block;
+  min-width: 10px;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+
+  &:hover {
+    animation-name: rubberBand;
+    animation-duration: 1s;
+    cursor: default;
+    color: $background-color;
+  }
+}
+
+@for $i from 1 through 50 {
+  .text-animate._#{$i} {
+    animation-delay: #{$i / 10}s;
+  }
+}

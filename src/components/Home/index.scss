@@ -1,0 +1,89 @@
+@import '../../App.scss';
+@keyframes bananaShake {
+  0% {
+    transform: rotate(-25deg) translateX(0);
+  }
+  25% {
+    transform: rotate(-15deg) translateX(5px);
+  }
+  50% {
+    transform: rotate(-25deg) translateX(-5px);
+  }
+  75% {
+    transform: rotate(-15deg) translateX(5px);
+  }
+  100% {
+    transform: rotate(-25deg) translateX(0);
+  }
+}
+
+@keyframes monkeShake {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(-5deg) translateX(5px);
+  }
+  50% {
+    transform: rotate(-0deg) translateX(-5px);
+  }
+  75% {
+    transform: rotate(-5deg) translateX(5px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+
+.home-monke {
+  margin-left: 13%;
+  margin-top: -10%;
+  width: 200px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.bananaJ {
+  margin-left: 15%;
+  margin-top: -5%;
+  transform: rotate(-25deg);
+  width: 60px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.home-monke.animate {
+  animation: monkeShake 2s linear;
+  animation-direction: reverse;
+}
+
+.bananaJ.animate {
+  animation: bananaShake 2s linear;
+}
+
+h2 {
+  margin-left: 100px;
+  font-size: 11px;
+  transform: rotate(-30deg) translateY(-100px);
+  z-index: 10;
+}
+
+.flat-button {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: 'Cheese';
+  text-decoration: none;
+  padding: 15px 18px;
+  background-color: $tertiary-color;
+  margin-top: 25px;
+  float: left;
+  animation: fadeInAnimation 1s 1.8s backwards;
+  border-radius: 12px;
+  white-space: nowrap;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
