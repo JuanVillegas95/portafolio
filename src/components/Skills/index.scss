@@ -1,55 +1,40 @@
-.stage-cube-cont {
-  will-change: transform, opacity; /* Hint for browsers */
-  transform: translateZ(0);
+@import "../../App.scss";
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+  h3 {
+    font-size: 16px;
+    line-height: 20px;
+    display: inline;
+    color: white;
+  }
+}
 
-  width: 50%;
-  height: 100%;
-  top: 0;
-  padding-top: 18%;
-  margin-left: 0;
+.skills-cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 40%;
   position: absolute;
-  right: 0;
-  overflow: hidden;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-  $delay-step: 0.2s; // Time between each element's animation
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: $tertiary-color;
+  border: solid white 3px;
+}
 
-  .card,
-  .contour {
-    animation: myBounceInUp 1.2s ease-out forwards;
-    opacity: 0; // Start all items hidden
-
-    // Apply incremental delays to all children
-    @for $i from 1 through 10 {
-      &:nth-child(#{$i}) {
-        animation-delay: ($delay-step * ($i - 1) + 2);
-      }
-    }
-  }
-
-  // Individual sizing
-  .card {
-    border: 10px solid white;
-
-    &:nth-child(1) {
-      width: 200px;
-    }
-    &:nth-child(2) {
-      width: 200px;
-    }
-  }
-
-  .contour {
-    filter: drop-shadow(5px 0 white) drop-shadow(-5px 0 white)
-      drop-shadow(0 5px white) drop-shadow(0 -5px white);
-
-    &:nth-child(3) {
-      width: 650px;
-    }
-    &:nth-child(4) {
-      width: 300px;
-    }
-    &:nth-child(5) {
-      width: 250px;
-    }
-  }
+.skill img {
+  object-fit: contain;
+  width: 60%;
 }

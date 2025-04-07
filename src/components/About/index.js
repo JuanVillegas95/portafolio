@@ -5,12 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
 import React from 'react'
 import { AnimatedLetters } from '../AnimatedLetters'
-import banana1 from '../../assets/images/babana1.png'
-import banana2 from '../../assets/images/babana2.png'
-import banana3 from '../../assets/images/babana3.png'
-import banana4 from '../../assets/images/babana4.png'
-import banana5 from '../../assets/images/babana5.png'
-import monke from '../../assets/images/monke.png'
 import me from '../../assets/images/photos/me.png'
 import pulga from '../../assets/images/photos/pulga.png'
 import roki from '../../assets/images/photos/roki.png'
@@ -58,7 +52,7 @@ export const About = () => {
           </p>
         </div>
 
-        <div className="stage-cube-cont">
+        <div className="about-cont">
           <img
             src={korea}
             className="imgs card"

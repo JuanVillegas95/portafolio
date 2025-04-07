@@ -1,4 +1,4 @@
-@import '../../App.scss';
+@import "../../App.scss";
 
 @keyframes myBounceInUp {
   0% {
@@ -55,22 +55,22 @@
 h1,
 h2 {
   color: #fff;
-  font-size: 56px;
+  font-size: 72px;
   line-height: 53px;
   margin: 0;
-  font-family: 'Cheese';
+  font-family: "Cheese";
   font-weight: 400;
 }
 
 h3 {
   font-size: 20px;
-  font-family: 'Nunito';
+  font-family: "Nunito";
   line-height: 30px;
 }
 
 p {
   font-size: 18px;
-  font-family: 'Nunito';
+  font-family: "Nunito";
   line-height: 28px;
   color: white;
 }
