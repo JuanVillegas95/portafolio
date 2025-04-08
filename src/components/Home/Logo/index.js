@@ -1,8 +1,9 @@
-import './index.scss'
-import React, { useEffect, useRef } from 'react'
-import homeMonkeSolid from '../../../assets/images/home-monke.png'
-import { gsap } from 'gsap-trial'
-import { DrawSVGPlugin } from 'gsap-trial/DrawSVGPlugin'
+import "./index.scss"
+import React, { useEffect, useRef } from "react"
+import homeMonkeSolid from "../../../assets/images/home-monke.png"
+import { gsap } from "gsap-trial"
+import { DrawSVGPlugin } from "gsap-trial/DrawSVGPlugin"
+import { Link } from "react-router-dom"
 
 export const Logo = () => {
   const bgRef = useRef(null)
@@ -17,12 +18,12 @@ export const Logo = () => {
       .to(bgRef.current, { duration: 1, opacity: 1 }) // First animation
       .fromTo(
         outlineLogoRef.current,
-        { drawSVG: '0%' },
-        { duration: 10, drawSVG: '15%', ease: 'power3.out' } // Slow start
+        { drawSVG: "0%" },
+        { duration: 10, drawSVG: "15%", ease: "power3.out" } // Slow start
       )
       .to(outlineLogoRef.current, {
         duration: 5,
-        drawSVG: '100%',
+        drawSVG: "100%",
       })
 
     gsap.fromTo(
@@ -54,7 +55,7 @@ export const Logo = () => {
         viewBox="0 0 300.000000 550.000000"
         preserveAspectRatio="xMidYMid meet"
       >
-        {' '}
+        {" "}
         <g
           transform="translate(0.000000,550.000000) scale(0.100000,-0.100000)"
           fill="transparent"
@@ -66,6 +67,9 @@ export const Logo = () => {
           />
         </g>
       </svg>
+      <Link to="/contact" className="flat-button">
+        Contact me
+      </Link>
     </div>
   )
 }

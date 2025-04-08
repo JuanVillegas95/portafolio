@@ -1,85 +1,97 @@
-@import '../../App.scss';
-@keyframes bananaShake {
-  0% {
-    transform: rotate(-25deg) translateX(0);
-  }
-  25% {
-    transform: rotate(-15deg) translateX(5px);
-  }
-  50% {
-    transform: rotate(-25deg) translateX(-5px);
-  }
-  75% {
-    transform: rotate(-15deg) translateX(5px);
-  }
-  100% {
-    transform: rotate(-25deg) translateX(0);
-  }
-}
+@import "../../App.scss";
 
-@keyframes monkeShake {
-  0% {
-    transform: rotate(0deg) translateX(0);
-  }
-  25% {
-    transform: rotate(-5deg) translateX(5px);
-  }
-  50% {
-    transform: rotate(-0deg) translateX(-5px);
-  }
-  75% {
-    transform: rotate(-5deg) translateX(5px);
-  }
-  100% {
-    transform: rotate(0deg) translateX(0);
-  }
-}
+.monke-wrapper {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: -100px;
+  left: 100px;
 
-.home-monke {
-  margin-left: 13%;
-  margin-top: -10%;
-  width: 200px;
+  > img:first-of-type {
+    width: 200px;
+    animation: monkeShake 2s linear;
+    animation-direction: reverse;
+    position: absolute;
+    top: 30px;
+    left: -20px;
+  }
+
+  > img:last-of-type {
+    position: absolute;
+    top: 130px;
+    width: 80px;
+    transform: rotate(-25deg);
+    animation: bananaShake 2s linear;
+  }
+
+  @media (max-width: 992px) {
+    left: 75px;
+    top: -100px;
+
+    > img:first-of-type {
+      width: 180px;
+      top: 30px;
+    }
+
+    > img:last-of-type {
+      width: 60px;
+      top: 120px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    left: 70px;
+    top: -80px;
+
+    > img:first-of-type {
+      width: 140px;
+      top: 35px;
+      left: -10px;
+    }
+
+    > img:last-of-type {
+      width: 50px;
+      top: 100px;
+    }
+  }
 
   &:hover {
     cursor: pointer;
   }
-}
-.bananaJ {
-  margin-left: 15%;
-  margin-top: -5%;
-  transform: rotate(-25deg);
-  width: 60px;
-  &:hover {
-    cursor: pointer;
-  }
-}
-.home-monke.animate {
-  animation: monkeShake 2s linear;
-  animation-direction: reverse;
-}
-
-.bananaJ.animate {
-  animation: bananaShake 2s linear;
 }
 
 h2 {
   margin-left: 100px;
-  font-size: 11px;
+  font-size: calc(11px + 0.3vw);
   transform: rotate(-30deg) translateY(-100px);
   z-index: 10;
+  position: absolute;
+  top: 120px;
+  left: -50px;
+  @media (max-width: 992px) {
+    transform: rotate(-30deg) translateY(-80px);
+  }
+
+  @media (max-width: 768px) {
+    transform: rotate(-30deg) translateY(-60px);
+  }
+
+  @media (max-width: 576px) {
+    transform: rotate(-30deg) translateY(-40px);
+    font-size: calc(10px + 0.3vw);
+  }
 }
 
 .flat-button {
   color: #fff;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 2px;
-  font-family: 'Cheese';
+  font-family: "Cheese";
   text-decoration: none;
-  padding: 15px 18px;
+  padding: 20px 22px;
   background-color: $tertiary-color;
-  margin-top: 25px;
-  float: left;
+  margin-top: 10px;
   animation: fadeInAnimation 1s 1.8s backwards;
   border-radius: 12px;
   white-space: nowrap;

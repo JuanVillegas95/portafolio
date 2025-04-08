@@ -1,25 +1,17 @@
+* {
+  box-sizing: border-box;
+}
 html {
   font-size: 62.5%;
+  min-height: 100%;
+  position: relative;
 }
 
 body {
+  height: 100%;
   margin: 0;
-  font: 300 11px/1.4, sans-serif;
-  color: #444;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #a5b68d;
   overflow: hidden;
-  display: block;
-}
-
-.dashboard {
-  margin-top: 200px;
-  margin-left: 200px;
-}
-
-@media screen and (max-width: 1200px) {
-  body {
-    overflow: visible;
-  }
 }

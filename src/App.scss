@@ -1,27 +1,95 @@
-$background-color: #b17f59;
 $primary-color: #ede8dc;
 $secondary-color: #a5b68d;
 $side-bar-color: #181818;
 $tertiary-color: #c1cfa1;
 $icons-color: #4d4d4e;
+$background-color: #b17f59;
 
-@import 'animate.css';
+@import "animate.css";
 
 @font-face {
-  font-family: 'Cheese';
-  src: url('./assets/fonts/MouldyCheeseRegular.ttf') format('truetype');
+  font-family: "Cheese";
+  src: url("./assets/fonts/MouldyCheeseRegular.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Nunito';
-  src: url('./assets/fonts/Nunito.ttf') format('truetype');
+  font-family: "Nunito";
+  src: url("./assets/fonts/Nunito.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
+}
+
+@keyframes myBounceInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1000px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(calc(var(--translateY, 0) - 20px))
+      rotate(var(--rotate, 0deg)) translateX(var(--translateX, 0));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(var(--translateY, 0)) rotate(var(--rotate, 0deg))
+      translateX(var(--translateX, 0));
+  }
+}
+
+@keyframes myBounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(1000px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(calc(var(--translateX, 0) - 20px));
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(var(--translateX, 0));
+  }
+}
+
+@keyframes bananaShake {
+  0% {
+    transform: rotate(-25deg) translateX(0);
+  }
+  25% {
+    transform: rotate(-15deg) translateX(5px);
+  }
+  50% {
+    transform: rotate(-25deg) translateX(-5px);
+  }
+  75% {
+    transform: rotate(-15deg) translateX(5px);
+  }
+  100% {
+    transform: rotate(-25deg) translateX(0);
+  }
+}
+
+@keyframes monkeShake {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(-5deg) translateX(5px);
+  }
+  50% {
+    transform: rotate(-0deg) translateX(-5px);
+  }
+  75% {
+    transform: rotate(-5deg) translateX(5px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
 }
 
 input,
 textarea {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
 }

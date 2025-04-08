@@ -1,21 +1,13 @@
-import React from 'react'
-import './index.scss'
-import { Sidebar } from '../Sidebar'
-import { Outlet } from 'react-router-dom'
-import layoutMonke2 from '../../assets/images/layout-monke2.png'
+import React from "react"
+import "./index.scss"
+import { Sidebar } from "../Sidebar"
+import { Outlet } from "react-router-dom"
 
 export const Layout = () => {
   return (
-    <div className="App">
+    <div className="app">
       <Sidebar />
-      <div className="page">
-        <Outlet />
-        <img
-          className="imgs hanged-monke"
-          src={layoutMonke2}
-          alt="bananaOpen"
-        />
-      </div>
+      <Outlet />
     </div>
   )
 }

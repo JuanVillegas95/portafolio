@@ -1,25 +1,57 @@
-@import '../../../App.scss';
+@import "../../../App.scss";
 .logo-container {
   position: absolute;
-  right: 10%;
-  top: -10%;
+  right: 22.5%;
+  top: 3%;
   width: 400px;
   height: 600px;
   opacity: 0;
   svg {
-    width: 100%;
+    width: 350px;
     transform: rotateZ(15deg) !important;
+    left: 0px;
+    position: absolute;
+    top: -10px;
+    z-index: 5;
   }
   .solid-logo {
-    width: 400px;
+    width: 350px;
     opacity: 0;
     position: absolute;
     transform: rotateZ(15deg);
     left: 0;
+    top: 35px;
+
+    z-index: 5;
+  }
+  z-index: 5;
+  &:hover {
+    .flat-button {
+      transform: scale(1.1);
+      transition: transform 0.3s ease; // Smooth transition
+    }
   }
 }
+
 .svg-logo {
   width: 100px;
   stroke: #6d3d2a;
   stroke-width: 20px;
+}
+.flat-button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: "Cheese";
+  text-decoration: none;
+  padding: 20px 22px;
+  background-color: $tertiary-color;
+  margin-top: 10px;
+  animation: fadeInAnimation 1s 1.8s backwards;
+  border-radius: 12px;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0px;
+  right: 120px;
 }
